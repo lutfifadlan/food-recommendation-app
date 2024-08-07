@@ -1,4 +1,11 @@
 /** @type {import('next').NextConfig} */
-const nextConfig = {};
+import path from 'path';
+
+const nextConfig = {
+  i18n: {
+    defaultLocale: 'id',
+    locales: ['en', 'id'],
+  },
+};
 
 export default nextConfig;

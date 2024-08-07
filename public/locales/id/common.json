@@ -1,0 +1,9 @@
+{
+  "title": "Dapatkan Rekomendasi Makanan & Minuman Sehat",
+  "inputPlaceholder": "Masukkan Lokasi atau Izinkan Situs",
+  "generateButton": "Buat Rekomendasi",
+  "generatingButton": "Sedang Membuat...",
+  "breakfast": "Sarapan",
+  "lunch": "Makan Siang",
+  "dinner": "Makan Malam"
+}

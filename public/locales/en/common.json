@@ -1,0 +1,9 @@
+{
+  "title": "Healthy Food & Drink Recommendator",
+  "inputPlaceholder": "Input Location or Allow Site",
+  "generateButton": "Generate Recommendation",
+  "generatingButton": "Generating...",
+  "breakfast": "Breakfast",
+  "lunch": "Lunch",
+  "dinner": "Dinner"
+}
