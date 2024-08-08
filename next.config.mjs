@@ -1,11 +1,8 @@
-/** @type {import('next').NextConfig} */
-import path from 'path';
+import nextI18NextConfig from './next-i18next.config.js';
 
+/** @type {import('next').NextConfig} */
 const nextConfig = {
-  i18n: {
-    defaultLocale: 'id',
-    locales: ['en', 'id'],
-  },
+  ...nextI18NextConfig
 };
 
 export default nextConfig;

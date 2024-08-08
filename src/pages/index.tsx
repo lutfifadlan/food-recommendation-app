@@ -7,9 +7,11 @@ import { useTranslation } from 'next-i18next';
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 import { GetStaticProps } from 'next';
 import LanguageSwitcher from '@/components/language-switcher';
+import { useRouter } from 'next/router';
 
 export default function Home() {
   const { t } = useTranslation('common');
+  const { locale } = useRouter();
   const [location, setLocation] = useState<string>('');
   const [loading, setLoading] = useState<boolean>(false);
   const [recommendation, setRecommendation] = useState<{ breakfast: string; lunch: string; dinner: string }>({
@@ -45,7 +47,7 @@ export default function Home() {
       headers: {
         'Content-Type': 'application/json',
       },
-      body: JSON.stringify({ location, language: t('title') }),
+      body: JSON.stringify({ location, language: locale }),
     });
     const data = await response.json();
     setRecommendation({
