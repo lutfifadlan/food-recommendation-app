@@ -70,12 +70,12 @@ export default function Home() {
 
   return (
     <div className="min-h-screen flex flex-col items-center justify-center bg-light dark:bg-dark">
-      <h1 className="text-4xl font-bold mb-4 text-gray-900 dark:text-gray-100 transition-colors duration-300 font-poppins">
+      <h1 className="text-4xl font-bold mb-4 text-gray-900 dark:text-gray-100 transition-colors duration-300">
         {t('title')}
       </h1>
       
       <div className="w-96">
-        <div className="flex items-center justify-between font-poppins">
+        <div className="flex items-center justify-between">
           <ModeToggle />
           <LanguageSwitcher />
           <Input
@@ -87,7 +87,7 @@ export default function Home() {
           />
         </div>
    
-        <Button onClick={handleGenerate} disabled={loading} className="w-full font-poppins font-semibold">
+        <Button onClick={handleGenerate} disabled={loading} className="w-full font-semibold">
           {loading ? t('generatingButton') : t('generateButton')}
         </Button>
       </div>
