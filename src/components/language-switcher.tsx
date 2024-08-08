@@ -27,13 +27,13 @@ const LanguageSwitcher = () => {
       </SelectTrigger>
       <SelectContent defaultValue="id">
         <SelectItem value="id">
-          <div className="flex items-center justify-center">
+          <div className="flex items-center justify-center font-poppins">
             <ReactCountryFlag countryCode="ID" svg style={{ width: '20px', height: '20px' }} className='mr-2' />
             Bahasa Indonesia
           </div>
         </SelectItem>
         <SelectItem value="en">
-          <div className="flex items-center justify-center">
+          <div className="flex items-center justify-center font-poppins">
             <ReactCountryFlag countryCode="US" svg style={{ width: '20px', height: '20px' }} className='mr-2' />
             English
           </div>
