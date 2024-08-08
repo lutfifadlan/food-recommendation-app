@@ -8,6 +8,7 @@ import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 import { GetStaticProps } from 'next';
 import LanguageSwitcher from '@/components/language-switcher';
 import { useRouter } from 'next/router';
+import nextI18NextConfig from '../../next-i18next.config';
 
 export default function Home() {
   const { t } = useTranslation('common');
@@ -39,6 +40,15 @@ export default function Home() {
 
     fetchLocation();
   }, []);
+
+  useEffect(() => {
+    // Clear recommendations when the locale changes
+    setRecommendation({
+      breakfast: '',
+      lunch: '',
+      dinner: ''
+    });
+  }, [locale]);
 
   const handleGenerate = async () => {
     setLoading(true);
@@ -110,6 +120,6 @@ export default function Home() {
 
 export const getStaticProps: GetStaticProps = async ({ locale }) => ({
   props: {
-    ...(await serverSideTranslations(locale || 'id', ['common'])),
+    ...(await serverSideTranslations(locale || 'id', ['common'], nextI18NextConfig)),
   },
 });
