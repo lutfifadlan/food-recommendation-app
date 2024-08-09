@@ -1,5 +1,6 @@
 {
-  "title": "Healthy Food & Drink Recommendator",
+  "title1": "Healthy Food & Drink",
+  "title2": "Recommendator",
   "inputPlaceholder": "Input Location or Allow Site",
   "generateButton": "Generate Recommendation",
   "generatingButton": "Generating...",

@@ -72,8 +72,11 @@ export default function Home() {
   return (
     <div className="min-h-screen flex flex-col items-center justify-center bg-light dark:bg-dark">
       <Meteors number={50} />
-      <h1 className="text-3xl font-bold mb-2 transition-colors duration-300">
-        {t('title')}
+      <h1 className="text-3xl font-bold mb-2 transition-colors duration-300 flex items-center justify-center">
+        {t('title1')}
+      </h1>
+      <h1 className="text-3xl font-bold mb-2 transition-colors duration-300 flex items-center justify-center">
+        {t('title2')}
       </h1>
       
       <div className="w-3/4">
@@ -91,13 +94,11 @@ export default function Home() {
             value={location}
             onChange={(e) => setLocation(e.target.value)}
           />
-          &nbsp;
-          &nbsp;
-          <Button onClick={handleGenerate} disabled={loading}>
-            {loading ? t('generatingButton') : t('generateButton')}
-          </Button>
         </div>
       </div>
+      <Button onClick={handleGenerate} disabled={loading} className="flex flex-col items-center justify-center">
+            {loading ? t('generatingButton') : t('generateButton')}
+        </Button>
       <div className="w-1/2 mt-4">
         {recommendation.breakfast && (
           <div>

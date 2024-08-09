@@ -1,5 +1,6 @@
 {
-  "title": "Dapatkan Rekomendasi Makanan & Minuman Sehat",
+  "title1": "Dapatkan Rekomendasi",
+  "title2": "Makanan & Minuman Sehat",
   "inputPlaceholder": "Masukkan Lokasi atau Izinkan Situs",
   "generateButton": "Buat Rekomendasi",
   "generatingButton": "Sedang Membuat...",
