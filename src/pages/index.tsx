@@ -9,6 +9,7 @@ import { GetStaticProps } from 'next';
 import LanguageSwitcher from '@/components/language-switcher';
 import { useRouter } from 'next/router';
 import nextI18NextConfig from '../../next-i18next.config';
+import Meteors from '@/components/magicui/meteors';
 
 export default function Home() {
   const { t } = useTranslation('common');
@@ -70,26 +71,32 @@ export default function Home() {
 
   return (
     <div className="min-h-screen flex flex-col items-center justify-center bg-light dark:bg-dark">
-      <h1 className="text-4xl font-bold mb-4 text-gray-900 dark:text-gray-100 transition-colors duration-300">
+      <Meteors number={50} />
+      <h1 className="text-3xl font-bold mb-2 transition-colors duration-300">
         {t('title')}
       </h1>
       
-      <div className="w-96">
-        <div className="flex items-center justify-between">
+      <div className="w-3/4">
+        <div className="flex items-center justify-center">
           <ModeToggle />
+          &nbsp;
+          &nbsp;
           <LanguageSwitcher />
+          &nbsp;
+          &nbsp;
           <Input
             type="text"
             placeholder={t('inputPlaceholder')}
-            className="w-64 mt-4 mb-4"
+            className="w-72 mt-4 mb-4"
             value={location}
             onChange={(e) => setLocation(e.target.value)}
           />
+          &nbsp;
+          &nbsp;
+          <Button onClick={handleGenerate} disabled={loading}>
+            {loading ? t('generatingButton') : t('generateButton')}
+          </Button>
         </div>
-   
-        <Button onClick={handleGenerate} disabled={loading} className="w-full font-semibold">
-          {loading ? t('generatingButton') : t('generateButton')}
-        </Button>
       </div>
       <div className="w-1/2 mt-4">
         {recommendation.breakfast && (
